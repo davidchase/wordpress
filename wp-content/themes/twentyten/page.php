@@ -25,6 +25,25 @@ get_header(); ?>
 			get_template_part( 'loop', 'page' );
 			?>
 					
+			
+				<?php
+				$fivesdrafts = $wpdb->get_results("SELECT * FROM $wpdb->posts
+					WHERE post_status = 'draft' AND post_author = 1");
+				if ($fivesdrafts) :
+					foreach ($fivesdrafts as $post) :
+						setup_postdata($post);
+				?>
+					<h2><a href="<?php the_permalink(); ?>" rel="bookmark"
+						title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<?php
+					endforeach;
+				else :
+				?>
+				    <h2> Not Found</h2>
+				<?php endif; ?>
+				
+				
+				
 			</div><!-- #content -->
 		</div><!-- #container -->
 
