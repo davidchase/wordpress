@@ -1,0 +1,23 @@
+body {background:#333;}
+a:link{color:#000; text-transform:uppercase;}
+a:visited{color:#000;text-transform:uppercase;}
+a:hover{color:#009999;text-transform:uppercase;}
+a:active{color:#000;text-transform:uppercase;}
+
+.loginav {
+	display: block;
+    float: right;
+    width: 140px;
+}
+
+#wrapper {
+	width:960;
+	background:#ccc;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+}
+
+#access {
+	background:none;
+}
